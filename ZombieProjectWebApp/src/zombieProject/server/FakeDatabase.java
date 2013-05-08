@@ -15,18 +15,32 @@ public class FakeDatabase implements IDatabase {
 		scoreList = new ArrayList<Score>();
 		
 		User user1 = new User();
-		user1.setUsername("alice");
-		user1.setPassword("abc");
+		user1.setUsername("LordDeathMaster");
+		user1.setPassword("adam");
 		
 		User user2 = new User();
-		user2.setUsername("bob");
-		user2.setPassword("def");
+		user2.setUsername("slipson");
+		user2.setPassword("zombie");
+		
+		User user3 = new User();
+		user3.setUsername("sbonner");
+		user3.setPassword("zombie");
+		
+		User user4 = new User();
+		user4.setUsername("josh");
+		user4.setPassword("zombie");
 		
 		userList.add(user1);
 		user1.setId(userList.size());
 		
 		userList.add(user2);
 		user2.setId(userList.size());
+		
+		userList.add(user3);
+		user3.setId(userList.size());
+		
+		userList.add(user4);
+		user4.setId(userList.size());
 		
 		scoreList = new ArrayList<Score>();
 		
@@ -38,8 +52,18 @@ public class FakeDatabase implements IDatabase {
 		score2.setUserId(user2.getId());
 		score2.setScore(23456);
 		
+		Score score3 = new Score();
+		score3.setUserId(user3.getId());
+		score3.setScore(33333);
+		
+		Score score4 = new Score();
+		score4.setUserId(user4.getId());
+		score4.setScore(44454);
+		
 		scoreList.add(score1);
 		scoreList.add(score2);
+		scoreList.add(score3);
+		scoreList.add(score4);
 	}
 	
 	@Override
@@ -51,14 +75,19 @@ public class FakeDatabase implements IDatabase {
 		}
 		return null;
 	}
-	@Override
-	public boolean logisValid(String username, String password){
-		for(User user : userList){
-			if(user.getUsername().equals(username) && user.getPassword().equals(password)){
-				return true;
-			}
-		}
-		return false;
-		
-	}
+//	@Override
+//	public boolean logisValid(String username, String password){
+//		boolean bool = false;
+//		
+//		for(User user : userList){
+//			if(user.getUsername().equals(username) && user.getPassword().equals(password)){
+//				bool = true;
+//				break;
+//			}else{
+//				bool = false;
+//			}
+//		}
+//		return bool;
+//		
+//	}
 }
