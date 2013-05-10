@@ -12,18 +12,12 @@ import java.util.Random;
 public class Game {
 	
 
-
-
-
 	private Player player;
 	ArrayList<Zombie> zombieList = new ArrayList<Zombie>();
 	ArrayList<Spawned> spawnList = new ArrayList<Spawned>();
 	ArrayList<Ammo> AmmoList = new ArrayList<Ammo>();
 	ArrayList<Obstacle> obsList = new ArrayList<Obstacle>();
 
-
-
-	
 	/**
 	 * game constructor
 	 */
@@ -32,13 +26,7 @@ public class Game {
 		this.zombieList.add(new Zombie(1, 1));
 	}
 
-
-
-
-
 	Random generator = new Random();
-
-
 
 	public Player getPlayer() {
 		return player;

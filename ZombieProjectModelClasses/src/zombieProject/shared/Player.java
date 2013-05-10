@@ -99,18 +99,12 @@ public class Player {
 	 * @param m the map coordinates
 	 * @return false = player CANNOT move, true = player CAN move
 	 */
-	public boolean canMove(Map m/*, Obstacle obs*/){
+	public boolean canMove(Map m){
 		//check to see if player is within playable boundaries, if player is trying to move outside boundaries, return false
 		if(this.x < m.getLeft() || this.x + player_width >= m.getRight() || this.y <= m.getTop() || this.y + player_height >= m.getBottom()){
 			return false;
 		}else{
 			return true;
-			//NOTE: might need to change taking obstacles into account
-			/*if(this.x > obs.getX() && this.x < obs.getX() + obs.getWidth() && this.y > obs.getY() && this.y < obs.getY() + obs.getHeight()){
-				return false;
-			}else{
-				return true;
-			}*/
 		}
 	}
 	

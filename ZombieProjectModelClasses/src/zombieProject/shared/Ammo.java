@@ -1,25 +1,18 @@
 package zombieProject.shared;
 
 public class Ammo {
-
-
-
-
+	
 		private double x;
 		private double y;
-
 
 		public Ammo(double x, double y){
 			this.x = x;
 			this.y = y;
 		}
 
-
 		public double getX(){
 			return x;
 		}
-
-
 
 		public double getY(){
 			return y;
@@ -32,7 +25,4 @@ public class Ammo {
 		public void setY(double y){
 			this.y = y;
 		}
-
-	
-
 }

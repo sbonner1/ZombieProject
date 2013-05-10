@@ -1,14 +1,9 @@
 package zombieProject;
 
 import static org.junit.Assert.*;
-
-import java.util.ArrayList;
-
 import org.junit.Before;
 import org.junit.Test;
-
 import zombieProject.shared.Game;
-import zombieProject.shared.Spawned;
 
 public class GameTester {
 
@@ -18,8 +13,6 @@ public class GameTester {
 	public void setUp() throws Exception {
 		game = new Game();
 	}
-
-	
 	@Test
 	public void testGetPlayer(){
 		assertEquals(game.getPlayer(), game.getPlayer());
